@@ -1,0 +1,218 @@
+ Part of QUALTRICS WEBSITE FEEDBACK SNIPPET DO NOT REMOVE-CONTENTS PLACED HERE ==== HEADER ====  End HEADER  ==== LANGUAGE CONFIRMATION MODAL DIALOG ====  Modal content ====== MAIN BODY ====== 
+        // This view acts as a rendering template to render InitScript(and server-side Form's descriptor) in FormContainerBlock's client-side for Form[a38acb88-693f-45a3-ac05-5b680bef0ab9].
+        // TECHNOTE: all serverside (paths, dynamic values) of EPiServerForms will be transfered to client side here in this section.
+    (function initializeOnRenderingFormDescriptor() {
+        // each workingFormInfo is store inside epi.EPiServer.Forms, lookup by its FormGuid
+        var workingFormInfo=epi.EPiServer.Forms["a38acb88-693f-45a3-ac05-5b680bef0ab9"] ={
+            Id: "a38acb88-693f-45a3-ac05-5b680bef0ab9" ,
+            Name: "ProQuest Long Sales Contact Form" ,
+            // whether this Form can be submitted which relates to the visitor's data (cookie, identity) and Form's settings (AllowAnonymous, AllowXXX)
+            SubmittableStatus : {"submittable":true,"message":""},
+            ConfirmMessage: "",
+            ResetConfirmMessage : "",
+            ShowNavigationBar : true,
+            ShowSummarizedData : false,
+            // serialize the dependency configuration of this form to clientside
+            DependenciesInfo : JSON.parse("[{\"fieldName\":\"__field_11575\",\"action\":{\"displayName\":\"Shown\",\"name\":\"EPiServer.Forms.Core.Internal.Dependency.ShowAction\",\"order\":1,\"clientsideAction\":\"show\"},\"conditionCombination\":\"Any\",\"conditions\":[{\"fieldName\":\"__field_2140\",\"operator\":\"Equals\",\"fieldValue\":\"Academic - Higher Education\"},{\"fieldName\":\"__field_2140\",\"operator\":\"Equals\",\"fieldValue\":\"Library Consortia\"},{\"fieldName\":\"__field_2140\",\"operator\":\"Equals\",\"fieldValue\":\"Finance/Banking/Accounting/Venture Capital\"},{\"fieldName\":\"__field_2140\",\"operator\":\"Equals\",\"fieldValue\":\"Government - Defense/Intelligence\"},{\"fieldName\":\"__field_2140\",\"operator\":\"Equals\",\"fieldValue\":\"Private individual\"},{\"fieldName\":\"__field_2140\",\"operator\":\"Equals\",\"fieldValue\":\"Non Profit\"},{\"fieldName\":\"__field_2140\",\"operator\":\"Equals\",\"fieldValue\":\"Public Library\"},{\"fieldName\":\"__field_2140\",\"operator\":\"Equals\",\"fieldValue\":\"Academic - Primary and Secondary Schools\"},{\"fieldName\":\"__field_2140\",\"operator\":\"Equals\",\"fieldValue\":\"Academic - Scholarly Publishing\"},{\"fieldName\":\"__field_2140\",\"operator\":\"Equals\",\"fieldValue\":\"Government - National/Federal\"},{\"fieldName\":\"__field_2140\",\"operator\":\"Equals\",\"fieldValue\":\"Government - Regional/State/Local\"},{\"fieldName\":\"__field_2140\",\"operator\":\"Equals\",\"fieldValue\":\"Government - Tribal/Indigenous Communities\"},{\"fieldName\":\"__field_2140\",\"operator\":\"Equals\",\"fieldValue\":\"Other\"}]},{\"fieldName\":\"__field_11576\",\"action\":{\"displayName\":\"Shown\",\"name\":\"EPiServer.Forms.Core.Internal.Dependency.ShowAction\",\"order\":1,\"clientsideAction\":\"show\"},\"conditionCombination\":\"Any\",\"conditions\":[{\"fieldName\":\"__field_2142\",\"operator\":\"Equals\",\"fieldValue\":\"United States\"},{\"fieldName\":\"__field_2142\",\"operator\":\"Equals\",\"fieldValue\":\"Australia\"},{\"fieldName\":\"__field_2142\",\"operator\":\"Equals\",\"fieldValue\":\"Brazil\"},{\"fieldName\":\"__field_2142\",\"operator\":\"Equals\",\"fieldValue\":\"Canada\"},{\"fieldName\":\"__field_2142\",\"operator\":\"Equals\",\"fieldValue\":\"China\"},{\"fieldName\":\"__field_2142\",\"operator\":\"Equals\",\"fieldValue\":\"India\"},{\"fieldName\":\"__field_2142\",\"operator\":\"Equals\",\"fieldValue\":\"Japan\"}]}]"),
+            // keep all fieldName which are not satisfied the field dependency conditions
+            DependencyInactiveElements: [],
+            // Validation info, for executing validating on client side
+            ValidationInfo : JSON.parse("[{\"targetElementName\":\"__field_2135\",\"targetElementId\":\"e86dc757-030b-4d52-a801-d201096ccf4d\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"This field is required.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}}]},{\"targetElementName\":\"__field_2136\",\"targetElementId\":\"1e2f329d-fd7d-42cb-af00-4dbd4a28d5bb\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"This field is required.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}}]},{\"targetElementName\":\"__field_2137\",\"targetElementId\":\"b4c03df9-77c5-4591-ac9a-0491365e3d4b\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"This field is required.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}},{\"type\":\"EPiServer.Forms.Implementation.Validation.EmailValidator\",\"description\":null,\"model\":{\"jsPattern\":\"^((([a-zA-Z]|\\\\d|[!#\\\\$%\u0026\u0027\\\\*\\\\+\\\\-\\\\/=\\\\?\\\\^_`{\\\\|}~]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])+(\\\\.([a-zA-Z]|\\\\d|[!#\\\\$%\u0026\u0027\\\\*\\\\+\\\\-\\\\/=\\\\?\\\\^_`{\\\\|}~]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])+)*)|((\\\\x22)((((\\\\x20|\\\\x09)*(\\\\x0d\\\\x0a))?(\\\\x20|\\\\x09)+)?(([\\\\x01-\\\\x08\\\\x0b\\\\x0c\\\\x0e-\\\\x1f\\\\x7f]|\\\\x21|[\\\\x23-\\\\x5b]|[\\\\x5d-\\\\x7e]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])|(\\\\\\\\([\\\\x01-\\\\x09\\\\x0b\\\\x0c\\\\x0d-\\\\x7f]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF]))))*(((\\\\x20|\\\\x09)*(\\\\x0d\\\\x0a))?(\\\\x20|\\\\x09)+)?(\\\\x22)))@((([a-zA-Z]|\\\\d|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])|(([a-zA-Z]|\\\\d|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])([a-zA-Z]|\\\\d|-|\\\\.|_|~|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])*([a-zA-Z]|\\\\d|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])))\\\\.)+(([a-zA-Z]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])|(([a-zA-Z]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])([a-zA-Z]|\\\\d|-|\\\\.|_|~|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])*([a-zA-Z]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])))\\\\.?$\",\"dotNetPattern\":\"^((([a-zA-Z]|\\\\d|[!#\\\\$%\u0026\u0027\\\\*\\\\+\\\\-\\\\/=\\\\?\\\\^_`{\\\\|}~]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])+(\\\\.([a-zA-Z]|\\\\d|[!#\\\\$%\u0026\u0027\\\\*\\\\+\\\\-\\\\/=\\\\?\\\\^_`{\\\\|}~]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])+)*)|((\\\\x22)((((\\\\x20|\\\\x09)*(\\\\x0d\\\\x0a))?(\\\\x20|\\\\x09)+)?(([\\\\x01-\\\\x08\\\\x0b\\\\x0c\\\\x0e-\\\\x1f\\\\x7f]|\\\\x21|[\\\\x23-\\\\x5b]|[\\\\x5d-\\\\x7e]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])|(\\\\\\\\([\\\\x01-\\\\x09\\\\x0b\\\\x0c\\\\x0d-\\\\x7f]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF]))))*(((\\\\x20|\\\\x09)*(\\\\x0d\\\\x0a))?(\\\\x20|\\\\x09)+)?(\\\\x22)))@((([a-zA-Z]|\\\\d|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])|(([a-zA-Z]|\\\\d|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])([a-zA-Z]|\\\\d|-|\\\\.|_|~|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])*([a-zA-Z]|\\\\d|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])))\\\\.)+(([a-zA-Z]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])|(([a-zA-Z]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])([a-zA-Z]|\\\\d|-|\\\\.|_|~|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])*([a-zA-Z]|[\\\\u00A0-\\\\uD7FF\\\\uF900-\\\\uFDCF\\\\uFDF0-\\\\uFFEF])))\\\\.?$\",\"message\":\"Enter a valid email address.\",\"validationCssClass\":null,\"additionalAttributes\":null}}]},{\"targetElementName\":\"__field_2138\",\"targetElementId\":\"33d0997a-30f4-423d-b41d-f204ede6f89f\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"This field is required.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}}]},{\"targetElementName\":\"__field_2140\",\"targetElementId\":\"ef3a084f-d62c-41d9-808f-7b19c0897738\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"Please select a Market\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}}]},{\"targetElementName\":\"__field_11575\",\"targetElementId\":\"429993c0-9ee1-473a-932d-0149af6b2bac\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"This field is required.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}}]},{\"targetElementName\":\"__field_2142\",\"targetElementId\":\"dcebc719-1e21-4658-897a-66fc69604c78\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"This field is required.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}}]},{\"targetElementName\":\"__field_11576\",\"targetElementId\":\"9f0fef3e-f012-4f48-8fc4-bc1514bfeea3\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"This field is required.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}}]},{\"targetElementName\":\"__field_2143\",\"targetElementId\":\"7d2ceb24-93d4-4c59-8621-03fb6e7d552e\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"This field is required.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}}]},{\"targetElementName\":\"__field_7298\",\"targetElementId\":\"efef6464-2a88-489b-b327-d2e7ee7e1cac\",\"validators\":[{\"type\":\"EPiServer.Forms.Implementation.Validation.RequiredValidator\",\"description\":null,\"model\":{\"message\":\"Privacy regulations require that we get your consent for submission.  If you are unable to consent please call us at 1 (877) 779-6768.\",\"validationCssClass\":\"ValidationRequired\",\"additionalAttributes\":{\"required\":\"\",\"aria-required\":\"true\"}}}]},{\"targetElementName\":\"__field_10182\",\"targetElementId\":\"d5e8464f-6cc2-4a87-8f0c-ecebb07c243c\",\"validators\":[{\"type\":\"EPiServer.Forms.Samples.Implementation.Validation.RecaptchaValidator\",\"description\":null,\"model\":{\"message\":\"Invalid reCAPTCHA value, please try again.\",\"validationCssClass\":null,\"additionalAttributes\":null}}]}]"),
+            // Steps information for driving multiple-step Forms.
+            StepsInfo : {
+                Steps: [{"index":0,"attachedUrl":"","dependField":null,"dependCondition":null,"isActive":true,"attachedContentLink":"","dependValue":"","elementName":"__field_","guid":"00000000-0000-0000-0000-000000000000"}]
+            },
+            FieldsExcludedInSubmissionSummary: [],
+            ElementsInfo: JSON.parse("{\"__field_2135\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextboxElementBlock\",\"friendlyName\":\"firstname\",\"customBinding\":false},\"__field_2136\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextboxElementBlock\",\"friendlyName\":\"lastname\",\"customBinding\":false},\"__field_2137\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextboxElementBlock\",\"friendlyName\":\"emailaddress\",\"customBinding\":false},\"__field_2139\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextboxElementBlock\",\"friendlyName\":\"businessphone\",\"customBinding\":false},\"__field_2138\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextboxElementBlock\",\"friendlyName\":\"company\",\"customBinding\":false},\"__field_2140\":{\"type\":\"EPiServer.Forms.Implementation.Elements.SelectionElementBlock\",\"friendlyName\":\"industry\",\"customBinding\":false},\"__field_11575\":{\"type\":\"ProQuest.Cms.Features.Content.Models.FormElements.SecondarySelectionElementBlock\",\"friendlyName\":\"jobfunction\",\"customBinding\":false},\"__field_2142\":{\"type\":\"EPiServer.Forms.Implementation.Elements.SelectionElementBlock\",\"friendlyName\":\"country\",\"customBinding\":false},\"__field_11576\":{\"type\":\"ProQuest.Cms.Features.Content.Models.FormElements.SecondarySelectionElementBlock\",\"friendlyName\":\"stateorprovince\",\"customBinding\":false},\"__field_2143\":{\"type\":\"EPiServer.Forms.Implementation.Elements.TextareaElementBlock\",\"friendlyName\":\"comments\",\"customBinding\":false},\"__field_7298\":{\"type\":\"EPiServer.Forms.Implementation.Elements.ChoiceElementBlock\",\"friendlyName\":\"optin\",\"customBinding\":false},\"__field_2147\":{\"type\":\"EPiServer.Forms.Implementation.Elements.ParagraphTextElementBlock\",\"friendlyName\":\"Important Links w/pref\",\"customBinding\":false},\"__field_2145\":{\"type\":\"EPiServer.Forms.Implementation.Elements.SubmitButtonElementBlock\",\"friendlyName\":\"Submit button\",\"customBinding\":false},\"__field_10376\":{\"type\":\"EPiServer.Forms.Implementation.Elements.ResetButtonElementBlock\",\"friendlyName\":\"Reset form\",\"customBinding\":false}}"),
+            DataSubmitController: "/EPiServer.Forms/DataSubmit"
+        };
+        /// TECHNOTE: Calculation at FormInfo level, and these values will be static input for later processing.
+        workingFormInfo.StepsInfo.FormHasNoStep_VirtualStepCreated=true; // this FLAG will be true, if Editor does not put any FormStep. Engine will create a virtual step, with empty GUID
+        workingFormInfo.StepsInfo.FormHasNothing=false; // this FLAG will be true if FormContainer has no element at all
+        workingFormInfo.StepsInfo.AllStepsAreNotLinked=true; // this FLAG will be true, if all steps all have contentLink= ="" (emptyString)
+    })();
+ Each FormStep groups the elements below it til the next FormStep 
+        body {
+            display: inline;
+            width: 100%;
+        }
+    
+         
+        document.write('<style type="text/css">body{display:inline-block;width:100%;}</style>');
+        
+     
+        setTimeout(function () {
+
+            if (document.getElementById('DivContainer') && document.getElementById('DivContainer').length) {
+                document.getElementById('DivContainer').style.visibility = 'visible';
+            }            
+
+            document.getElementById('DivHeroImage').style.visibility = 'visible';
+            document.getElementById('DivHeroImage2').style.visibility = 'visible';
+        }, 1500);
+
+     ==== FOOTER ==== 
+        <div id="teconsent" style="display: inline;"></div>
+            OneTrust Cookies Settings button start <button id="ot-sdk-btn" class="ot-sdk-show-settings">Cookie Settings</button>
+                                 OneTrust Cookies Settings button end  == HANDLE LANGUAGE SELECTION == 
+    $(function () {
+        
+        var currentLanguage = getCookie('currentLanguage');
+        var defaultLanguage = getCookie('defaultLanguage');
+       
+        if (currentLanguage != defaultLanguage) {            
+            $('#languageModal').modal('show');
+        }
+         
+        $('#btnSetDefaultLanguage').click(function () {            
+            var language = $('.header-language-dropdown a').data('language');
+            var apiUrl = "/SetDefaultLanguage";          
+            $.post(apiUrl, { currentLanguage: language });
+        });
+
+        $('#btnSetDefaultLanguageNo').click(function () {
+            var defaultLanguageCode = defaultLanguage.toLowerCase();
+            var path = '';
+            $('.language-dropdown a').each(function (index, item) {
+                if ($(item).attr('href').toLowerCase().indexOf('/' + defaultLanguageCode + '/') !== -1) {
+                    path = $(item).attr('href');
+                }
+            });
+            window.location.href = path;
+        });
+    });
+
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+
+    function getCookieKeyValue(cookiename, key) {
+        var cookie = getCookie(cookiename);
+        var keyValue = cookie.split('&');
+        var results = keyValue.filter(function (item) { return item.indexOf(key) != -1 });
+        if (results && results.length)
+            return results[0].split('=')[1];
+        else
+            return null;
+    }
+
+/*
+This EPiServerForms_prerequisite.js TEMPLATE will be compiled with serverside values and injected into ViewMode page
+We reuse the existed global var epi from EPiServer CMS, if any. It will init/grab the epi object, and init epi.EPiServer.Forms object
+*/
+
+// (by default) Forms's jQuery will be injected right before this file. From now on, we refer Forms own jQuery as $$epiforms.
+// after this code, the object $ and jQuery will revert back to its original meaning in original library (Alloy jQuery or other lib).
+
+// Our clients' sites may include their own Jquery version (e.g. a higher version for some special functionalities), which leads to unexpected conflicts with ours.
+// To avoid this, we use jQuery.noConflict()  to set up $$epiforms as an allias for our jquery and then, revert Jquery allias to clients' by using
+// epi.EPiServer.Forms.OriginalJQuery whose value is set up as Jquery at the beginning in FormBlockController.
+// This also allows us to extend our own Jquery's functionalities without causing further conflicts.
+
+var $$epiforms = epi.EPiServer.Forms.InjectFormOwnJQuery ? jQuery.noConflict() : jQuery;
+if (epi.EPiServer.Forms.OriginalJQuery) {
+    jQuery = epi.EPiServer.Forms.OriginalJQuery;
+    delete epi.EPiServer.Forms.OriginalJQuery;
+}
+(function () {
+    var externalScript = ["/Util/EPiServer.Forms.Samples/jquery-ui/jquery-ui.min.js","/Util/EPiServer.Forms.Samples/js/EPiServerFormsSamples.js","https://www.google.com/recaptcha/api.js?render=6LdPah4pAAAAAGKo60hZY-3RH1agHSbchl8RJ3ue"],
+        externalCss = ["/Util/EPiServer.Forms.Samples/css/EPiServerFormsSamples.css","/Util/EPiServer.Forms.Samples/jquery-ui/jquery-ui.min.css","/Util/EPiServer.Forms.Samples/jquery-ui/jquery-ui.structure.min.css","/Util/EPiServer.Forms.Samples/jquery-ui/jquery-ui.theme.min.css"];
+
+    if (epi.EPiServer.Forms.ExternalScriptSources) {
+        externalScript = epi.EPiServer.Forms.ExternalScriptSources.concat(externalScript);
+        // Remove duplicate items
+        externalScript = externalScript.filter(function (value, index, self) {
+            return self.indexOf(value) === index;
+        });
+    }
+    if (epi.EPiServer.Forms.ExternalCssSources) {
+        externalCss = epi.EPiServer.Forms.ExternalCssSources.concat(externalCss);
+        // Remove duplicate items
+        externalCss = externalCss.filter(function (value, index, self) {
+            return self.indexOf(value) === index;
+        });
+    }
+
+    $$epiforms.extend(true, epi.EPiServer, {
+        CurrentPageLink: "1772",
+        CurrentPageLanguage: "en",
+        CurrentFormLanguage: "en",
+        Forms: {
+            Utils: {}, Data: {}, Extension: {}, Validation: {}, Navigation: {}, Dependency: {},
+            $: $$epiforms,  // save our own link to our own jQuery
+            ThrottleTimeout: 500,  // miliseconds
+            ExternalScriptSources: externalScript,
+            ExternalCssSources: externalCss,
+            UploadExtensionBlackList: "asp,aspx,asa,ashx,asmx,bat,chm,class,cmd,com,config,dll,exe,hta,htr,htw,jse,json,lnk,mda,mdb,msc,msh,pif,printer,ps1,ps2,reg,rem,scf,scr,sct,shtm,shtml,soap,stm,svc,url,vb,vbe,vbs,vsix,ws,wsc,wsf,wsh,xamlx,htm,html,js,jar",
+            Messages: {"viewMode":{"malformStepConfiguration":"Improperly formed FormStep configuration. Some steps are attached to pages, while some steps are not attached, or attached to content with no public URL.","commonValidationFail":"This element value is not valid."},"fileUpload":{"overFileSize":"The upload file size should be less than {0} MB.","invalidFileType":"The upload file format is not allowed or not supported.","postedFile":"(Previous posted file(s): {0})"}},
+            LocalizedResources: {"samples":{"criteria":{"formcriterion":{"category":"Episerver Forms","displayname":"Submitted Form","description":"Checks for form submission by the visitor.","submissionstatus":"Submission status","selectedform":"Selected form"},"submittedvaluecriterion":{"category":"Episerver Forms","displayname":"Submitted Form Value","description":"Checks for form submission value by the visitor.","selectedform":"Selected form","selectedfield":"Selected field","condition":"Condition","value":"Value"}},"datetimepickertype":{"datepicker":"Date picker","timepicker":"Time picker","datetimepicker":"Date time picker"},"confirmationdialog":{"title":"Summary","buttons":{"ok":"OK","cancel":"Cancel"}},"editview":{"requirejsrecaptcha":"JavaScript is required to display reCAPTCHA.","requirejshcaptcha":"JavaScript is required to display hCAPTCHA."},"messages":{"imagesubmitbutton":{"initializationmessage":"This is an image submit button. Please, choose an image for it."}}},"viewmode":{"addresselement":{"addresslabel":"Address","streetlabel":"Street","citylabel":"City","statelabel":"State","postallabel":"Postal Code","countrylabel":"Country"},"stepnavigation":{"previous":"Previous step","next":"Next step","page":"Step"},"untitled":"Untitled","selection":{"selectanoption":"-- Select an option --","selectoptions":"-- Select options --"},"reset":"Reset form","submit":"Submit","refreshcaptcha":"Refresh captcha","captchalabel":"Word verification","malformstepconfigruation":"Improperly formed FormStep configuration. Some steps are attached to pages, while some steps are not attached, or attached to content with no public URL.","commonvalidationfail":"This element value is not valid.","readonlymode":"Read-only mode. Submitted data is not saved.","submissionactors":{"savedatatostorage":{"error":"Something went wrong. Please contact the administrator for more information."}},"errorformusingdivinnonjsmode":"Form render using div element required js enabled to be able to work properly","error":"Something went wrong. Please contact the administrator for more information."},"validators":{"episerver.forms.samples.implementation.validation.datetimevalidator":{"displayname":"Datetime validator","message":"Enter a valid date time in {0} hh:mm format."},"episerver.forms.samples.implementation.validation.datevalidator":{"displayname":"Date validator","message":"Enter a valid date in {0} format."},"episerver.forms.samples.implementation.validation.timevalidator":{"displayname":"Time validator","message":"Enter a valid time, e.g. 10:20 AM."},"episerver.forms.samples.implementation.validation.recaptchavalidator":{"displayname":"Recaptcha validator","message":"Invalid reCAPTCHA value, please try again."},"episerver.forms.samples.implementation.validation.hcaptchavalidator":{"displayname":"Hcaptcha validator","message":"Invalid hCAPTCHA value, please try again."},"episerver.forms.implementation.validation.datetimerangevalidator":{"displayname":"Date time range","message":"Enter a valid date time range."},"episerver.forms.implementation.validation.addressvalidator":{"displayname":"Address","message":"Enter a valid address."},"episerver.forms.implementation.validation.requiredvalidator":{"displayname":"Required","message":"This field is required."},"episerver.forms.implementation.validation.regularexpressionvalidator":{"displayname":"Regular expression","message":"This field should be in \"{0}\" format."},"episerver.forms.implementation.validation.captchavalidator":{"displayname":"Captcha","message":"Enter the characters you see in the picture."},"episerver.forms.implementation.validation.allowedextensionsvalidator":{"displayname":"Allowed extensions","message":"The upload file format is not allowed or not supported.","allowedextensionsmessage":"The upload file format is not allowed or not supported. File format should be: {0}."},"episerver.forms.implementation.validation.maxfilesizevalidator":{"displayname":"Max file size","message":"The upload file size should be less than {0} MB."},"episerver.forms.implementation.validation.emailvalidator":{"displayname":"Email","message":"Enter a valid email address."},"episerver.forms.implementation.validation.urlvalidator":{"displayname":"Url","message":"Enter a valid URL."},"episerver.forms.implementation.validation.dateddmmyyyyvalidator":{"displayname":"Date (DD/MM/YYYY)","message":"Enter a date in the DD/MM/YYYY format."},"episerver.forms.implementation.validation.datemmddyyyyvalidator":{"displayname":"Date (MM/DD/YYYY)","message":"Enter a date in the MM/DD/YYYY format."},"episerver.forms.implementation.validation.dateyyyymmddvalidator":{"displayname":"Date (YYYY-MM-DD)","message":"Enter a date in the YYYY-MM-DD format."},"episerver.forms.implementation.validation.numericvalidator":{"displayname":"Numeric","message":"Enter a valid number."},"episerver.forms.implementation.validation.integervalidator":{"displayname":"Integer","message":"Enter a valid integer."},"episerver.forms.implementation.validation.positiveintegervalidator":{"displayname":"Positive integer","message":"Enter a valid positive integer."},"elementselfvalidator":{"unexpectedvalueisnotaccepted":"Unexpected value is not accepted."},"custommessage":{"resetbuttonlabel":"Reset to default","errormessagelabel":"Error message "},"fileuploadelementselfvalidator":{"multiplefilenotallowed":"Not allowed to upload multiple files."}},"externalsystems":{"episerver.marketing.connector.forms.marketingconnectormapping":{"displayname":"MA System Database"}},"conditioncombination":{"all":"All","any":"Any"},"satisfiedaction":{"hide":"Hidden","show":"Shown"},"contenttypescomponent":{"title":"Form Elements","description":"Show all content types of Optimizely Forms"},"formscomponent":{"title":"Forms","description":"Manage forms for the website","command":{"create":{"label":"New form"},"viewdata":{"label":"Form submissions"}},"messages":{"nocontent":"This folder does not contain any forms."}},"formdataview":{"name":"Form submissions","description":"View form submissions","heading":"Form submissions","begindate":"From date","enddate":"To date","search":"Search","nodata":"There is no data","export":"Export as ...","exportasxml":"XML","exportasxmldesc":"Export form data in XML format","exportascsv":"CSV","exportascsvdesc":"Export form data in CSV format","exportasjson":"JSON","exportasjsondesc":"Export form data in JSON format","finalizedonly":"Finalized Only","deleteselecteditems":"Delete","exportasxlsx":"XLSX","exportasxlsxdesc":"Export form data in XLSX format","selectalltooltip":"Select All","deselectalltooltip":"Deselect All","deleteconfirmation":"Do you want to delete the selected items? This action cannot be undone.","nopostid":"No post Id for deleting.","couldnotgetassociateform":"Could not get associate Form.","deletesuccessful":"Successfully deleted post data.","accessdenied":"You do not have permission to view this data.","submittime":"Time","submituser":"By user","hostedpage":"Submitted from","finalizedsubmission":"Finalized","selectioninfo":"All <b>${0}</b> record(s) are selected. ","extraselectionlink":"Select all <b>${0}</b> records","clearselectionlink":"Clear selection","filterdata":"Filter","searchallcolumns":"All columns","exportasdecryptedcsv":"Decrypted CSV","exportasdecryptedcsvdesc":"Decrypt and export form data in CSV format"},"formscontentarea":{"emptyactions":{"actions":{"createnewformselement":"create a new element"},"template":"You can drop form elements here or ","templatewithoutcreate":"You can drop content here."}},"fieldselector":{"title":"Select dependent field"},"submissionactors":{"episerver.forms.implementation.actors.callwebhookaftersubmissionactor":{"displayname":"Trigger webhook after form submission"},"episerver.forms.implementation.actors.sendemailaftersubmissionactor":{"displayname":"Send email after form submission"}},"visitordatasources":{"episerver.forms.implementation.visitordata.ipaddressvisitordatasource":{"displayname":"IP Address"},"episerver.forms.implementation.visitordata.geovisitordatasource":{"displayname":"Geo","properties":{"city":"City","country_code":"Country code","country_name":"Country name","ip":"IP","latitude":"Latitude","longitude":"Longitude","region_code":"Region code","region_name":"Region name","time_zone":"Time zone","zip_code":"Zip code"}},"episerver.forms.implementation.visitordata.profilevisitordatasource":{"displayname":"Profile","properties":{"address":"Address","zipcode":"Zip code","locality":"Locality","email":"Email","firstname":"First name","lastname":"Last name","language":"Language","country":"Country","company":"Company","title":"Title","phonenumber":"Phone number"}},"episerver.forms.implementation.visitordata.useragentvisitordatasource":{"displayname":"User agent","properties":{"ismobiledevice":"Is mobile","useragent":"User agent"}},"episerver.forms.implementation.visitordata.visitorgroupvisitordatasource":{"displayname":"Visitor groups","properties":{"id":"Id","name":"Name"}},"youmustselectvalueforhiddenvisitor":"You must select a value for the type of visitor data you choose."},"messages":{"fileupload":{"overfilesize":"The upload file size should be less than {0} MB.","invalidfiletype":"The upload file format is not allowed or not supported.","postedfile":"(Previous posted file(s): {0})"},"formsubmission":{"outdatedforminit":"Your current session for viewing the form is expired. Refresh your page to continue.","requirelogin":"You must be logged in to submit this form. If you are logged in and still cannot post, make sure \"Do not track\" in your browser settings is disabled.","denymultisubmit":"You already submitted this form.","submitsuccess":"The form has been submitted successfully.","validationfailformat":"Validation failed on \"{0}\" field: {1}","thereisnoformguid":"Submit data FAILED: there is no Form's Guid.","couldnotgetform":"Submit data FAILED: could not get Form with Id = {0}.","submitcancelled":"TECHNICAL INFO: Submitting process is cancelled. Reason: ","formisrestricted":"Could not submit form. You do not have sufficient privileges.","formexpired":"Could not submit form. Form has been expired.","formdeleted":"Could not submit form. Form has been deleted.","submitnotsuccess":"Failed to submit.","sessionoff":"You cannot submit this form because an administrator has turned off data storage."}},"dependcondition":{"notapplicable":"Not applicable","matchregularexpression":"Match with regular expression","equals":"Equals","notequals":"Not equals","contains":"Contains","notcontains":"Not contains"},"imagechoiceitems":{"emptyactions":{"actions":{"createnewitem":"Create a link to an image"},"template":"Drop image content here.<br/>You also can {createnewitem}."},"menutooltip":"Display menu"},"editview":{"elementdependant":"This field depends on other field(s)","retentionperiod":{"partial":"partial","finalized":"finalized","default":"Default","keepforsomedays":"{0} days","customization":"Custom (days):","keepforever":"Forever","validation":{"errormessage":{"long":"The {0} submission retention period field must be an integer between {1} and {2}","short":"Input must be an integer between {0} and {1}"}},"revision":{"warningmessage":"At least {0} submission(s) are affected by your retention policy change"}},"notconfigured":"Not configured yet","insertplaceholder":"Insert placeholder","selectanitem":"Select an item","externalsystems":"External system field mapping","connecteddatasource":"Connect to Datasource","createemailtemplate":"Create email template","editemailtemplate":"Edit email template","addwebhook":"Add webhook","editwebhook":"Edit webhook","selectpage":"Select Page","editpage":"Edit page link","usemanualinput":"Use manual input","errorconditionalstepcannotcontainrequiredelement":"This Form step should not depend on other elements because it contains mandatory element [{0}].","cannotbuildformmodel":"Cannot build the form. You cannot use FormContainerBlock as a property. You can render a form in a ContentArea only.","resetconnecteddatasource":"Reset"},"contentediting":{"fielddependency":{"condition":{"field":"Field","operator":"Operator","value":"Value"},"invalidcondition":"The condition is no longer valid","conditiondialog":{"title":"Condition Details"}},"optionitem":{"caption":"Choice","value":"Value","checked":"Checked by default","containsinvalidcharacter":"Comma (,) character is not allowed."},"emailtemplateactor":{"fromemail":"From","fromemaildescription":"Email address to send from","toemails":"To","toemailsdescription":"Email address to send to, or name of a form field with the email address (for confirmation emails)","subject":"Subject","subjectdescription":"Subject line for the email. You can use #FIELDNAME# to insert values from the form.","body":"Message","bodydescription":"The body of the email. You can insert values from the form with #FIELDNAME#, or show a summary listing of the form fields with #SUMMARY.","fromemailplaceholder":"someone@example.com","toemailsplaceholder":"address@example.com,...","subjectplaceholder":"Enter email subject"},"webhookactor":{"url":"Webhook URL","urldescription":"Webhook URL to send data payload to (http or https protocol).","jsonformat":"POST data in JSON format"},"validation":{"circulardependency":"Circular dependency configuration is not allowed","greaterthanequaltoerrorformat":"The {0} must be >= {1}'s value.","lessthanequaltoerrorformat":"The {0} must be <= {1}'s value.","inrangeerrorformat":"\"{0}\" is not a valid value for {1}. Only number is allowed and {1} must be in range of [{2} - {3}]'s value.","stepinrangeerrorformat":"The {0} must be >= 1 and <= {2} - {1} value.","positiveinteger":"Only a positive number is allowed."}},"rangeelementblock":{"increment":"Increment","decrement":"Decrement"}}
+        }
+    });
+})();
+
+
+if (typeof $$epiforms !== 'undefined') {
+    $$epiforms(document).ready(function () {
+        $$epiforms('.EPiServerForms, [data-f-type="form"]').on("formsNavigationNextStep formsSetupCompleted", function (event) {
+            (function ($) {
+                var originalText = $("#c9cbafc4-d352-402b-87f0-ee15c6b7b833" + "__OriginalText", $workingForm).html(),
+                    workingFormInfo = event.workingFormInfo,
+                    searchPattern = null,
+                    $workingForm = workingFormInfo.$workingForm,
+                    $currentElement = $("#c9cbafc4-d352-402b-87f0-ee15c6b7b833", $workingForm);
+
+                // if cannot find the element in form, do nothing
+                if (!$currentElement || $currentElement.length == 0) {
+                    return;
+                }
+
+                var data = epi.EPiServer.Forms.Data.loadFormDataFromStorage(workingFormInfo.Id);
+
+                // In case the element is not under the form folder, Model.HasPlaceHolder() will return false because of cannot find the owner form.
+                // So when Model.FindOwnerForm() is null, we allow to replace the placeholder in JS mode.
+                if (false) { 
+                    // replace placeholder with real field value
+                    for (var fieldName in workingFormInfo.ElementsInfo) {
+                        if (workingFormInfo.FieldsExcludedInSubmissionSummary.indexOf(fieldName) != -1) {
+                            continue;
+                        }
+                        var elementInfo = workingFormInfo.ElementsInfo[fieldName],
+                            friendlyName = elementInfo.friendlyName;
+                        if (!friendlyName) {
+                            continue;
+                        }
+                        var value = elementInfo && elementInfo.customBinding == true ?
+                            epi.EPiServer.Forms.CustomBindingElements[elementInfo.type](elementInfo, data[fieldName])
+                            : data[fieldName];
+                        if (value == null || value === undefined) {
+                            value = "";
+                        }
+
+                        // If the element is inactive (hidden due to dependency rules), set its value to empty
+                        if (epi.EPiServer.Forms.Dependency._isInactiveElement(fieldName, workingFormInfo)) {
+                            value = "";
+                        }
+
+                        //We have to encode the friendlyName before replacing it with placeholders in the paragraph text because the paragraph text is already encoded.
+                        var encodedFriendlyName = $('<div></div>').text(friendlyName).html();
+
+                        //https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/String/replace
+                        //https://msdn.microsoft.com/en-us/library/ewy2t5e0.aspx
+                        var escapeSpecialCharacterFromEncodedFriendlyName = encodedFriendlyName.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+
+                        // Add backward compatible for old placeholder key
+                        searchPattern = new RegExp("(?:#|::)" + escapeSpecialCharacterFromEncodedFriendlyName + "(?:#|::)", 'gi');
+                        originalText = originalText.replace(searchPattern, $('<div></div>').text(value).html());
+                    }
+                }
+                $currentElement.html(originalText);
+            })($$epiforms);
+        });
+    });
+}
+
+
+document.addEventListener('DOMContentLoaded',function(){if(typeof FindApi === 'function'){var api = new FindApi();api.setApplicationUrl('/');api.setServiceApiBaseUrl('/find_v2/');api.processEventFromCurrentUri();api.bindWindowEvents();api.bindAClickEvent();api.sendBufferedEvents();}})
+ Back to top button 
